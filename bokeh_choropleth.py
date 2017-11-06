@@ -13,7 +13,7 @@ def bokeh_choropleth(data_df, geojson, key_on, data, tooltips, color_mapper):
     
     for f in geojson2['features']:
         for col in data_df.columns:
-            f['properties'][col] = data_df[data_df[key_on[0]] == f['properties'][key_on[1]]][col].values[0]
+            f['properties'][col] = str(data_df[data_df[key_on[0]] == f['properties'][key_on[1]]][col].values[0])
         f['geometry']['coordinates'] = [[transform(in_proj, out_proj, p[0], p[1]) for p in c] for c in f['geometry']['coordinates']]
     
     geo_source = GeoJSONDataSource(geojson=json.dumps(geojson2))
