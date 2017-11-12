@@ -1,5 +1,3 @@
 #NE Analytics
 
-Autores:
-Rute Souza de Abreu
-Yuri Thomas Pinheiro Nunes
+Autores: Rute Souza de Abreu e Yuri Thomas Pinheiro Nunes
